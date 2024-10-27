@@ -44,6 +44,7 @@
 
 
         <!-- Topbar Start -->
+<div class="container-fluid fixed-top">
         <div class="container-fluid bg-primary px-5 d-none d-lg-block">
             <div class="row gx-0 align-items-center">
                 <div class="col-lg-5 text-center text-lg-start mb-lg-0">
@@ -70,6 +71,7 @@
                 </div>
             </div>
         </div>
+ </div>
         <!-- Topbar End -->
 
         <!-- Navbar & Hero Start -->
@@ -124,7 +126,9 @@
                         <p class="text-white mb-4 fs-5 wow fadeInUp" data-wow-delay="0.5s">
                             Secure your visa with confidence. We handle the paperwork so you can focus on your adventure.
                         </p>
-                        <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp" data-wow-delay="0.7s" href="">Start Your Journey</a>
+                         <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal7"><span class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp">Schedule</span></a>
+
+                        
                     </div>
                 </div>
             </div>
@@ -139,7 +143,7 @@
                         <p class="text-white mb-4 fs-5 wow fadeInUp" data-wow-delay="0.5s">
                             Travel to over 50 countries with our seamless visa services. From Europe to Asia, we’ve got you covered.
                         </p>
-                        <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp" data-wow-delay="0.7s" href="#">Schedule Your Journey</a>
+                          <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal7"><span class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp">Schedule</span></a>
                     </div>
                 </div>
             </div>
@@ -154,7 +158,8 @@
                         <p class="text-white mb-4 fs-5 wow fadeInUp" data-wow-delay="0.5s">
                             Join thousands of happy travelers who trust us for quick, reliable visa approvals.
                         </p>
-                        <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp" data-wow-delay="0.7s" href="">Contact Us</a>
+                       
+                        <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal7"><span class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp">Schedule</span></a>
                     </div>
                 </div>
             </div>
@@ -174,7 +179,97 @@
 
         <!-- Carousel End -->
 
+<div class="modal fade" id="inquiryModal7" tabindex="-1" aria-labelledby="inquiryModalLabel7" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h7 class="modal-title" id="inquiryModalLabel7"> <h6 ><button type="button" class="btn btn-warning btn-sm"> Schedule </button><button type="button" class="btn btn-info btn-sm">Visa  </button><button type="button" class="btn btn-danger btn-sm">Service </button></h6></h7>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="background-image: url('https://plus.unsplash.com/premium_photo-1706559780094-648dbe2b2bd0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2NoZWR1bGV8ZW58MHx8MHx8fDA%3D'); background-size: cover; background-position: center;">
+                    <div class="icon">   <i class="fa fa-tourist"></i></div>
+                 <form id="visaScheduleForm">
+          
+          <!-- Personal Information -->
+          <div class="row">
+            <div class="col">
+              <label for="applicantFullName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="applicantFullName" placeholder="Enter your full name" required>
+            </div>
+            <div class="col">
+              <label for="applicantEmail" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="applicantEmail" placeholder="Enter your email" required>
+            </div>
+          </div>
+          
+          <!-- Contact Information -->
+          <div class="row">
+            <div class="col">
+              <label for="applicantPhone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="applicantPhone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="col">
+              <label for="contactMethod" class="form-label">Preferred Contact Method</label>
+              <select class="form-select" id="contactMethod" required>
+                <option selected disabled>Select Contact Method</option>
+                <option value="email">Email</option>
+                <option value="phone">Phone Call</option>
+                <option value="whatsapp">WhatsApp</option>
+              </select>
+            </div>
+          </div>
 
+          <!-- Appointment Information -->
+          <div class="row">
+            <div class="col">
+              <label for="visaType" class="form-label">Visa Type</label>
+              <select class="form-select" id="visaType" required>
+                <option selected disabled>Select Visa Type</option>
+                <option value="tourist">Tourist Visa</option>
+                <option value="business">Business Visa</option>
+                <option value="student">Student Visa</option>
+                <option value="work">Work Visa</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="col">
+              <label for="preferredDate" class="form-label">Preferred Appointment Date</label>
+              <input type="date" class="form-control" id="preferredDate" required>
+            </div>
+          </div>
+
+          <!-- Appointment Time Preference -->
+          <div class="row">
+            <div class="col">
+              <label for="preferredTime" class="form-label">Preferred Time</label>
+              <input type="time" class="form-control" id="preferredTime" required>
+            </div>
+            <div class="col">
+              <label for="timezone" class="form-label">Time Zone</label>
+              <select class="form-select" id="timezone" required>
+                <option selected disabled>Select Time Zone</option>
+                <option value="EST">Eastern Standard Time (EST)</option>
+                <option value="PST">Pacific Standard Time (PST)</option>
+                <option value="CET">Central European Time (CET)</option>
+                <option value="IST">India Standard Time (IST)</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Additional Message -->
+          <div class="mb-3">
+            <label for="appointmentMessage" class="form-label">Additional Requirements or Message</label>
+            <textarea class="form-control" id="appointmentMessage" rows="4" placeholder="Enter any additional information or questions" required></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-success w-100">Schedule Appointment</button>
+        </form>
+                </div>
+            </div>
+        </div>
+    </div>
         <!-- Modal Search Start -->
         <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
@@ -423,7 +518,7 @@
                             </div>
                             <div class="px-4">
                                 
-                                <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal5"><span class="badge rounded-pill bg-danger">Enquiry Now</span></a>
+                                <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal5"><span class="badge rounded-pill bg-dark">Enquiry Now</span></a>
                             </div>
                         </div>
                     </div>
@@ -442,7 +537,7 @@
                             </div>
                             <div class="px-4">
                                 
-                               <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal4"><span class="badge rounded-pill bg-danger">Enquiry Now</span></a>
+                               <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal4"><span class="badge rounded-pill bg-info">Enquiry Now</span></a>
                             </div>
                         </div>
                     </div>
@@ -461,7 +556,7 @@
                             </div>
                             <div class="px-4">
                                
-                               <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal3"><span class="badge rounded-pill bg-danger">Enquiry Now</span></a>
+                               <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal3"><span class="badge rounded-pill bg-primary">Enquiry Now</span></a>
                             </div>
                         </div>
                     </div>
@@ -480,7 +575,7 @@
                             </div>
                             <div class="px-4">
                                
-                                <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal2"><span class="badge rounded-pill bg-danger">Enquiry Now</span></a>
+                                <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal2"><span class="badge rounded-pill bg-secondary">Enquiry Now</span></a>
                             </div>
                         </div>
                     </div>
@@ -499,7 +594,7 @@
                             </div>
                             <div class="px-4">
                                 
-                                <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal1"><span class="badge rounded-pill bg-danger">Enquiry Now</span></a>
+                                <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal1"><span class="badge rounded-pill bg-success">Enquiry Now</span></a>
                             </div>
                         </div>
                     </div>
@@ -1114,8 +1209,64 @@
         </div>
         <!-- Features End -->
 
+<div style="max-width: 600px; margin: 20px auto; border: 2px solid #1e7ed6; border-radius: 8px; overflow: hidden;">
+  <!-- Consultation Services -->
+  <div style="border-bottom: 1px solid #1e7ed6;">
+    <button data-ui-tablist-tab style="width: 100%; padding: 15px; background-color: #e8f4fd; border: none; text-align: left; font-size: 18px; font-weight: bold; color: #1e7ed6; cursor: pointer;">📋 Visa Consultation</button>
+    <div data-ui-tablist-tabpanel style="padding: 15px; display: block;">
+      <div style="font-size: 16px; color: #145a8e;">
+        Get personalized guidance on the visa application process tailored to your specific needs, including eligibility and requirements.
+      </div>
+    </div>
+  </div>
 
+  <!-- Documentation Assistance -->
+  <div style="border-bottom: 1px solid #1e7ed6;">
+    <button data-ui-tablist-tab style="width: 100%; padding: 15px; background-color: #e8f4fd; border: none; text-align: left; font-size: 18px; font-weight: bold; color: #1e7ed6; cursor: pointer;">📝 Documentation Assistance</button>
+    <div data-ui-tablist-tabpanel style="padding: 15px; display: none;">
+      <div style="font-size: 16px; color: #145a8e;">
+        We help you prepare and review all necessary documents, ensuring accuracy and compliance with immigration regulations.
+      </div>
+    </div>
+  </div>
 
+  <!-- Application Process -->
+  <div style="border-bottom: 1px solid #1e7ed6;">
+    <button data-ui-tablist-tab style="width: 100%; padding: 15px; background-color: #e8f4fd; border: none; text-align: left; font-size: 18px; font-weight: bold; color: #1e7ed6; cursor: pointer;">🌎 Application Process</button>
+    <div data-ui-tablist-tabpanel style="padding: 15px; display: none;">
+      <div style="font-size: 16px; color: #145a8e;">
+        From filling out forms to submission, our team will assist you at every step of the application to make it as smooth as possible.
+      </div>
+    </div>
+  </div>
+
+  <!-- Customer Support -->
+  <div>
+    <button data-ui-tablist-tab style="width: 100%; padding: 15px; background-color: #e8f4fd; border: none; text-align: left; font-size: 18px; font-weight: bold; color: #1e7ed6; cursor: pointer;">📞 Customer Support</button>
+    <div data-ui-tablist-tabpanel style="padding: 15px; display: none;">
+      <div style="font-size: 16px; color: #145a8e;">
+        Our support team is here to answer all your queries and keep you updated on your application status.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const accordionButtons = document.querySelectorAll('[data-ui-tablist-tab]');
+  
+  accordionButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const panel = button.nextElementSibling;
+      const isOpen = panel.style.display === 'block';
+
+      document.querySelectorAll('[data-ui-tablist-tabpanel]').forEach(p => p.style.display = 'none');
+      
+      if (!isOpen) {
+        panel.style.display = 'block';
+      }
+    });
+  });
+</script>
         <!-- Countries We Offer Start -->
         <div class="container-fluid country overflow-hidden py-5" id="countries">
             <div class="container">
