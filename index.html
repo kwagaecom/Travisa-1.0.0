@@ -80,36 +80,32 @@
         <!-- Topbar End -->
 
         <!-- Navbar & Hero Start -->
-        <div class="container-fluid nav-bar p-0">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="display-5 text-secondary m-0"><img src="img/brand-logo.png" class="img-fluid" alt="">Travisa</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about"  class="nav-item nav-link">About</a>
-                        <a href="#service"   class="nav-item nav-link">Service</a>
-                        <a href="#feature" class="nav-item nav-link">Feature</a>
-                        <a href="#countries" class="nav-item nav-link">Countries</a>
-                        <a href="#testimonial" class="nav-item nav-link">Review</a>
-                         <a href="#trainer" class="nav-item nav-link">Trainer</a>
-                        
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
-                    </div>
-                    
-                    <a href="#gallery" class="nav-item nav-link">Gallery</a>
-                </div>
-            </nav>
+       <div class="container-fluid nav-bar p-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+        <a href="#" class="navbar-brand p-0">
+            <h1 class="display-5 text-secondary m-0">
+                <img src="img/brand-logo.png" class="img-fluid" alt="">Travisa
+            </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="#home" class="nav-item nav-link active" onclick="collapseNavbar()">Home</a>
+                <a href="#about" class="nav-item nav-link" onclick="collapseNavbar()">About</a>
+                <a href="#service" class="nav-item nav-link" onclick="collapseNavbar()">Service</a>
+                <a href="#feature" class="nav-item nav-link" onclick="collapseNavbar()">Feature</a>
+                <a href="#countries" class="nav-item nav-link" onclick="collapseNavbar()">Countries</a>
+                <a href="#testimonial" class="nav-item nav-link" onclick="collapseNavbar()">Review</a>
+                <a href="#trainer" class="nav-item nav-link" onclick="collapseNavbar()">Trainer</a>
+                <a href="#contact" class="nav-item nav-link" onclick="collapseNavbar()">Contact</a>
+            </div>
+            <a href="#gallery" class="nav-item nav-link" onclick="collapseNavbar()">Gallery</a>
         </div>
-        <!-- Navbar & Hero End -->
-         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    </nav>
+</div>
+
 <script>
 function collapseNavbar() {
     var navbarCollapse = document.getElementById("navbarCollapse");
