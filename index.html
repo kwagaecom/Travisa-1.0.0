@@ -78,7 +78,18 @@
         </div>
  </div>
         <!-- Topbar End -->
-
+<script>
+function collapseNavbar() {
+    var navbarCollapse = document.getElementById("navbarCollapse");
+    var navbarToggler = document.querySelector(".navbar-toggler");
+    
+    // Collapse navbar if it's currently open
+    if (navbarCollapse.classList.contains("show")) {
+        new bootstrap.Collapse(navbarCollapse).toggle();
+        navbarToggler.classList.add("collapsed"); // Ensure the icon collapses as well
+    }
+}
+</script>
         <!-- Navbar & Hero Start -->
         <div class="container-fluid nav-bar p-0">
             <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
